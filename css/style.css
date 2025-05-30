@@ -152,7 +152,7 @@ footer {
 .competence-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-auto-rows: min-content; /* Au lieu de répéter des lignes fixées */
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -164,9 +164,9 @@ footer {
     padding: 1.5rem 1rem;
     display: flex;
     flex-direction: column;
-    align-items: stretch; /* pour que le titre prenne toute la largeur */
-    min-height: 170px;
-    /* transition et hover supprimés */
+    align-items: stretch;
+    /* Supprimer cette ligne: min-height: 170px; */
+    height: auto; /* Hauteur basée sur le contenu */
 }
 
 .competence-card:hover {
