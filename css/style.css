@@ -23,6 +23,9 @@ header {
     background: var(--secondary);
     box-shadow: var(--shadow);
     padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav ul {
@@ -96,30 +99,46 @@ footer {
 
 .timeline {
     position: relative;
-    margin: 2rem 0 2rem 1.5rem;
-    padding-left: 2rem;
-    border-left: 2px solid var(--accent);
+    margin: 2rem 0;
+    padding-left: 40px; /* espace pour la frise */
 }
 
 .timeline-item {
     position: relative;
     margin-bottom: 2.5rem;
+    min-height: 1.2rem;
 }
 
 .timeline-dot {
     position: absolute;
-    left: -1.1rem;
-    top: 0.2rem;
-    width: 1.2rem;
-    height: 1.2rem;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
     background: var(--primary);
     border-radius: 50%;
     border: 3px solid var(--background);
     box-shadow: 0 0 0 4px var(--accent);
+    z-index: 2;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 12px; 
+    top: 24px;
+    width: 4px;
+    height: calc(100% + 24px); 
+    background: var(--accent);
+    z-index: 1;
+}
+
+/* Pour ne pas afficher la ligne après le dernier point */
+.timeline-item:last-child .timeline-line {
+    display: none;
 }
 
 .timeline-content {
-    padding-left: 1.5rem;
+    padding-left: 40px; /* espace entre le point et le contenu */
 }
 
 .timeline-date {
@@ -128,4 +147,136 @@ footer {
     font-weight: bold;
     margin-bottom: 0.2rem;
     display: inline-block;
+}
+
+.competence-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.competence-card {
+    background: var(--accent);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* pour que le titre prenne toute la largeur */
+    min-height: 170px;
+    /* transition et hover supprimés */
+}
+
+.competence-card:hover {
+    /* plus d'effet */
+    transform: none;
+}
+
+.competence-card h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    color: var(--primary);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center; /* centré */
+}
+
+.competence-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: var(--foreground);
+    text-align: left; /* aligné à gauche */
+    width: 100%;
+}
+
+.competence-card li {
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    background: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+.competence-bar {
+    position: relative;
+    height: 24px;
+    width: 100%;
+    border: 1px solid #444;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #23272e; /* Couleur de fond plus claire */
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.competence-percent {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--foreground);
+    font-size: 0.95rem;
+    z-index: 2;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.competence-wave {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(135deg, #7ecbff 60%, #b3e0ff 100%);
+    transform-origin: left center;
+    clip-path: inset(0 100% 0 0); /* Initialement vide */
+}
+
+/* Animation de remplissage des derniers pourcentages */
+.competence-wave.animate-final {
+    transition: clip-path 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Effet de vague tournée à 90° sur le côté droit */
+.competence-wave::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px; /* Largeur de l'effet */
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.1));
+    animation: waveUpDown 2s ease-in-out infinite;
+}
+
+@keyframes waveUpDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(30%); }
+}
+
+main,
+section,
+.competence-card,
+.timeline-content,
+footer,
+.intro p,
+.resume,
+.projets,
+.formation,
+.contact {
+    text-align: justify;
+    text-justify: inter-word;
+    word-break: break-word;
 }

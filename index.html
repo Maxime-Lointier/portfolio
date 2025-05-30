@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portefolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
+
 <body>
     <header>
         <nav>
@@ -26,6 +29,7 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
+                    <div class="timeline-line"></div>
                     <div class="timeline-content">
                         <span class="timeline-date">2024</span>
                         <strong>Stage développeur web chez XYZ</strong>
@@ -34,6 +38,7 @@
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
+                    <div class="timeline-line"></div>
                     <div class="timeline-content">
                         <span class="timeline-date">2023</span>
                         <strong>Projet étudiant : Application de gestion de tâches</strong>
@@ -44,11 +49,98 @@
         </section>
         <section class="competences">
             <h2>Compétences</h2>
-            <ul>
-                <li>HTML / CSS / JavaScript</li>
-                <li>Python, Java</li>
-                <li>Git, SQL</li>
-            </ul>
+            <div class="competence-grid">
+                <div class="competence-card">
+                    <h3>Web</h3>
+                    <ul>
+                        <!-- Exemple pour une compétence -->
+                        <li>
+                            HTML
+                            <div class="competence-bar" data-percent="90">
+                                <span class="competence-percent">90%</span>
+                                <div class="competence-wave"></div>
+                            </div>
+                        </li>
+                        <!-- Exemple pour une compétence -->
+                        <li>
+                            CSS
+                            <div class="competence-bar" data-percent="80">
+                                <span class="competence-percent">80%</span>
+                                <div class="competence-wave"></div>
+                            </div>
+                        </li>
+                        <!-- Exemple pour une compétence -->
+                        <li>
+                            JS
+                            <div class="competence-bar" data-percent="50">
+                                <span class="competence-percent">50%</span>
+                                <div class="competence-wave"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="competence-card">
+                    <h3>Programmation</h3>
+                    <ul>
+                        <!-- Exemple pour une compétence -->
+                        <li>
+                            Python
+                            <div class="competence-bar" data-percent="80">
+                                <span class="competence-percent">80%</span>
+                                <div class="competence-wave"></div>
+                            </div>
+                        </li>
+                        <!-- Exemple pour une compétence -->
+                        <li>
+                            Java
+                            <div class="competence-bar" data-percent="80">
+                                <span class="competence-percent">80%</span>
+                                <div class="competence-wave"></div>
+                            </div>
+                        </li>
+                        <!-- Exemple pour une compétence -->
+                        <li>
+                            C
+                            <div class="competence-bar" data-percent="80">
+                                <span class="competence-percent">80%</span>
+                                <div class="competence-wave"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="competence-card">
+                    <h3>Réseaux</h3>
+                    <ul>
+                        <li>TCP/IP</li>
+                        <li>Wireshark</li>
+                        <li>Placeholder</li>
+                    </ul>
+                </div>
+                <div class="competence-card">
+                    <h3>Base de données</h3>
+                    <ul>
+                        <li>SQL</li>
+                        <li>MySQL</li>
+                        <li>Placeholder</li>
+                    </ul>
+                </div>
+                <div class="competence-card">
+                    <h3>Autre</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>Linux</li>
+                        <li>Placeholder</li>
+                    </ul>
+                </div>
+                <div class="competence-card">
+                    <h3>Langues</h3>
+                    <ul>
+                        <li>Français</li>
+                        <li>Anglais</li>
+                        <li>Placeholder</li>
+                    </ul>
+                </div>
+            </div>
         </section>
         <section class="formation">
             <h2>Formation</h2>
@@ -71,4 +163,5 @@
         <p>&copy; 2025 Maxime Lointier</p>
     </footer>
 </body>
+
 </html>
