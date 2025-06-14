@@ -405,6 +405,7 @@ a:hover, a:focus {
 @media (max-width: 768px) {
     body {
         font-size: 16px; /* Réduit la taille du texte */
+        padding: 0; /* Supprime les marges inutiles */
     }
 
     .header-content {
@@ -448,5 +449,18 @@ a:hover, a:focus {
     .loisirs ul {
         flex-direction: column; /* Loisirs en colonne */
         gap: 0.5rem;
+    }
+
+    .competence-card ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .competence-card {
+        padding: 1rem; /* Réduit les marges internes */
+    }
+
+    footer {
+        font-size: 0.9rem; /* Réduit la taille du texte */
     }
 }
