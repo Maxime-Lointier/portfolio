@@ -448,6 +448,13 @@ a:hover, a:focus {
     .timeline-content {
         padding-left: 20px; /* Réduit l'espace entre le point et le contenu */
     }
+    .timeline-dot {
+        left: -15px;
+    }
+    .timeline-line {
+        left: -2px; /* Ajuste la ligne pour qu'elle soit plus proche du point */
+    }
+
 
     /* Loisirs en colonne */
     .loisirs ul {
