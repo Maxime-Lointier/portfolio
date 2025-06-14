@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 :root {
     --background: #18191a;
     --foreground: #f5f5f7;
@@ -287,4 +290,21 @@ footer,
     text-align: justify;
     text-justify: inter-word;
     word-break: break-word;
+}
+/* Lien général */
+a {
+    color: #7ecbff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s, background 0.2s;
+    border-radius: 4px;
+    padding: 0 2px;
+}
+
+/* Effet au survol */
+a:hover, a:focus {
+    color: #fff;
+    background: #0071e3;
+    text-decoration: none;
+    outline: none;
 }
