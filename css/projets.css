@@ -1,0 +1,81 @@
+
+
+main {
+    padding: 2rem;
+}
+
+/* Projets section */
+.projets h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #0071e3; /* Couleur primaire */
+}
+/* Projets section */
+
+
+.projet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.projet-card {
+    background: var(--accent);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    /* pas d'animation */
+}
+
+.projet-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--primary);
+    color: var(--foreground);
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+}
+
+.projet-title:hover {
+    background: #005bb5;
+}
+
+.chevron {
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    margin-left: 0.5em;
+    transition: transform 0.3s;
+}
+.chevron::before {
+    content: '';
+    display: block;
+    width: 0.7em;
+    height: 0.7em;
+    border-right: 3px solid var(--foreground, #fff);
+    border-bottom: 3px solid var(--foreground, #fff);
+    transform: rotate(45deg);
+    margin: auto;
+    margin-top: 0.2em;
+}
+.projet-card.active .chevron {
+    transform: rotate(90deg);
+}
+
+.projet-content {
+    margin-top: 1rem;
+    display: none;
+    color: var(--foreground);
+}
+
+.projet-card.active .projet-content {
+    display: block;
+}
