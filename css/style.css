@@ -1,3 +1,6 @@
+body{
+    background-color: #18191a;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -13,7 +16,7 @@ html {
 }
 
 html, body {
-    background: url('../purple-and-black-lines-wallpaper-3554x1999_53.jpg') center center/cover no-repeat fixed;
+    background: #18191a url('../purple-and-black-lines-wallpaper-1920x1080_48.jpg') center center/cover no-repeat fixed;
     margin: 0;
     padding: 0;
     color: var(--foreground);
@@ -360,4 +363,42 @@ a:hover, a:focus {
     width: 1.5em;
     height: 1.5em;
     display: block;
+}
+.loisirs {
+    margin-top: 2.5rem;
+    text-align: left;
+}
+.loisirs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5em 0 0 0;
+    display: flex;
+    justify-content: flex-start; /* aligner à gauche */
+    gap: 0.7em;
+}
+.loisirs li {
+    background: var(--accent, #7ecbff);
+    color: var(--foreground, #222);
+    border-radius: 8px;
+    padding: 0.25em 0.8em;
+    font-weight: 500;
+    font-size: 0.93em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: block;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.header-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary, #0071e3);
+    letter-spacing: 1px;
 }
