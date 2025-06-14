@@ -402,65 +402,80 @@ a:hover, a:focus {
     letter-spacing: 1px;
 }
 
+.competences p {
+    max-width: 100%; /* Empêche le dépassement */
+    margin: 0 auto; /* Centre le texte */
+    text-align: justify;
+    word-wrap: break-word; /* Coupe les mots longs si nécessaire */
+}
+
 @media (max-width: 768px) {
     body {
         font-size: 16px; /* Réduit la taille du texte */
         padding: 0; /* Supprime les marges inutiles */
     }
 
+    /* Ajuste la grille des compétences */
+    .competence-grid {
+        grid-template-columns: 1fr; /* Une seule colonne */
+        gap: 1rem; /* Réduit l'espace entre les cartes */
+    }
+
+    /* Ajuste les cartes de compétences */
+    .competence-card {
+        padding: 1rem; /* Réduit les marges internes */
+        font-size: 0.9rem; /* Réduit la taille du texte */
+    }
+
+    /* Ajuste les barres de progression */
+    .competence-bar {
+        height: 20px; /* Réduit la hauteur */
+    }
+
+    .competence-percent {
+        font-size: 0.8rem; /* Réduit la taille du texte */
+    }
+
+    /* Ajuste les sections */
+    main {
+        padding: 1rem; /* Réduit les marges globales */
+    }
+
+    .timeline {
+        padding-left: 10px; /* Réduit l'espace pour la frise */
+    }
+
+    .timeline-content {
+        padding-left: 20px; /* Réduit l'espace entre le point et le contenu */
+    }
+
+    /* Loisirs en colonne */
+    .loisirs ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* Contact actions en colonne */
+    .contact-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* Menu en colonne */
     .header-content {
-        flex-direction: column; /* Empile le nom et le menu */
+        flex-direction: column;
         align-items: center;
         padding: 1rem;
     }
 
     nav ul {
-        flex-direction: column; /* Menu en colonne */
+        flex-direction: column;
         gap: 1rem;
         padding: 0;
     }
 
-    main {
-        padding: 1rem; /* Réduit les marges */
-    }
-
-    .competence-grid {
-        grid-template-columns: 1fr; /* Une seule colonne */
-        gap: 1rem;
-    }
-
-    .timeline {
-        padding-left: 20px; /* Réduit l'espace pour la frise */
-    }
-
-    .timeline-content {
-        padding-left: 30px; /* Réduit l'espace entre le point et le contenu */
-    }
-
-    .projet-list {
-        gap: 1rem; /* Réduit l'espace entre les projets */
-    }
-
-    .contact-actions {
-        flex-direction: column; /* Empile les boutons */
-        gap: 0.5rem;
-    }
-
-    .loisirs ul {
-        flex-direction: column; /* Loisirs en colonne */
-        gap: 0.5rem;
-    }
-
-    .competence-card ul {
-        padding: 0;
-        margin: 0;
-    }
-
-    .competence-card {
-        padding: 1rem; /* Réduit les marges internes */
-    }
-
-    footer {
+    .competences p {
         font-size: 0.9rem; /* Réduit la taille du texte */
+        padding: 0 1rem; /* Ajoute un peu d'espace sur les côtés */
     }
 }
