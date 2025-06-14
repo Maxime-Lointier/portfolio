@@ -79,3 +79,54 @@ main {
 .projet-card.active .projet-content {
     display: block;
 }
+.competence-tags {
+    margin: 0.7em 0 0.7em 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.competence-tag {
+    display: inline-block;
+    background: #0071e3;
+    color: #fff;
+    padding: 0.35em 1em;
+    border-radius: 20px;
+    font-size: 0.98em;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    max-width: 140px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: background 0.2s;
+}
+
+.competence-tag:hover {
+    background: #005bb5;
+}
+.github-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    background: #23272e;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5em 1.2em;
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+}
+.github-btn:hover {
+    background: #0071e3;
+    color: #fff;
+}
+.github-logo {
+    width: 1.3em;
+    height: 1.3em;
+    vertical-align: middle;
+}
