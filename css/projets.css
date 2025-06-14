@@ -130,3 +130,11 @@ main {
     height: 1.3em;
     vertical-align: middle;
 }
+.projet-content {
+    text-align: justify;
+    line-height: 1.7;
+}
+.projet-content ul {
+    line-height: 1.5;
+    margin-bottom: 0.7em;
+}
