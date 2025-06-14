@@ -1,4 +1,21 @@
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
+    const copyBtn = document.getElementById('copy-mail');
+    const mailText = document.getElementById('mail-text');
+    const copySuccess = document.getElementById('copy-success');
+    function copyMail() {
+        navigator.clipboard.writeText(mailText.textContent.trim());
+        copySuccess.style.display = 'inline';
+        setTimeout(() => {
+            copySuccess.style.display = 'none';
+        }, 1200);
+    }
+    if (copyBtn && mailText && copySuccess) {
+        copyBtn.addEventListener('click', copyMail);
+        mailText.addEventListener('click', copyMail);
+        mailText.style.cursor = "pointer";
+        mailText.title = "Cliquer pour copier";
+    }
+    
     document.querySelectorAll('.competence-bar').forEach(bar => {
         const percent = parseInt(bar.getAttribute('data-percent'));
         const wave = bar.querySelector('.competence-wave');
