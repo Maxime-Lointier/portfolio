@@ -34,6 +34,7 @@ header {
     z-index: 100;
 }
 
+
 nav ul {
     display: flex;
     justify-content: flex-end; /* aligner à droite */
